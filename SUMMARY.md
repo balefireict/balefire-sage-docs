@@ -1,0 +1,15 @@
+# Table of contents
+
+* [Introduction](README.md)
+* [Strategy](strategy/README.md)
+  * [Sage vs EtchWP](strategy/sage-vs-etchwp.md)
+  * [The Ask](strategy/the-ask.md)
+* [Architecture](architecture/README.md)
+  * [Blade + Blocks Blend](architecture/blade-blocks-blend.md)
+  * [The Monorepo](architecture/monorepo.md)
+  * [Design Tokens](architecture/design-tokens.md)
+* [Deployment](deployment/README.md)
+  * [Path A: WP Engine](deployment/wp-engine.md)
+  * [Path B: VPS + Trellis](deployment/vps-trellis.md)
+* [Reference Implementation](reference/README.md)
+* [Timeline & Costs](timeline.md)

@@ -11,9 +11,9 @@ Three layers, left to right. Only the leftmost column changes per site.
 ```
 theme.css (per-site)              @theme mapping              component Blade
 ────────────────────────          ────────────────            ──────────────
---bfa-blue: #00338f       →      --color-primary       →     bg-primary
---bfa-red: #c8102e        →      --color-accent        →     text-accent
---bfa-font-heading: "..."  →     --font-headline       →     font-headline
+--bma-blue: #00338f       →      --color-primary       →     bg-primary
+--bma-red: #c8102e        →      --color-accent        →     text-accent
+--bma-font-heading: "..."  →     --font-headline       →     font-headline
 ```
 
 The component says "use the primary color." The theme says "primary is blue." This separation means the same CTA Banner block looks correct on every client site without touching component code.
@@ -58,14 +58,14 @@ The consumer Sage theme provides two CSS files:
 ```css
 /* David Tours example */
 :root {
-    --bfa-blue: #00338f;
-    --bfa-blue-dark: #00186c;
-    --bfa-red: #c8102e;
-    --bfa-red-dark: #84081c;
-    --bfa-slate: #6f779d;
-    --bfa-black: #1a1a1a;
-    --bfa-font-heading: "DM Serif Display", Georgia, serif;
-    --bfa-font-body: "Montserrat", system-ui, sans-serif;
+    --bma-blue: #00338f;
+    --bma-blue-dark: #00186c;
+    --bma-red: #c8102e;
+    --bma-red-dark: #84081c;
+    --bma-slate: #6f779d;
+    --bma-black: #1a1a1a;
+    --bma-font-heading: "DM Serif Display", Georgia, serif;
+    --bma-font-body: "Montserrat", system-ui, sans-serif;
 }
 ```
 
@@ -75,16 +75,16 @@ The consumer Sage theme provides two CSS files:
 @import "tailwindcss";
 
 @theme {
-    --color-primary: var(--bfa-blue);
-    --color-primary-dark: var(--bfa-blue-dark);
-    --color-secondary: var(--bfa-red);
-    --color-accent: var(--bfa-red);
-    --color-accent-dark: var(--bfa-red-dark);
-    --color-dark: var(--bfa-black);
+    --color-primary: var(--bma-blue);
+    --color-primary-dark: var(--bma-blue-dark);
+    --color-secondary: var(--bma-red);
+    --color-accent: var(--bma-red);
+    --color-accent-dark: var(--bma-red-dark);
+    --color-dark: var(--bma-black);
     --color-surface: #f4f4f4;
-    --color-muted: var(--bfa-slate);
-    --font-headline: var(--bfa-font-heading);
-    --font-body: var(--bfa-font-body);
+    --color-muted: var(--bma-slate);
+    --font-headline: var(--bma-font-heading);
+    --font-body: var(--bma-font-body);
 }
 ```
 

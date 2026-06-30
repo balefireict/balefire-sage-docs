@@ -10,38 +10,6 @@ Accu-shot.com is already being built on Sage, giving us a running start on the c
 
 ---
 
-## The Problem
-
-Every new WPBakery site re-invents the same building blocks from scratch. Buttons, cards, CTAs, hero sections, feature grids, testimonials, sliders. Code is copy-pasted between themes, diverges over time, and improvements on one site never make it back to others.
-
-We proved the Composer distribution model on David Tours (17+ component packages). We proved the Gutenberg + Tailwind block model on nnnode (17 blocks, PHP render callbacks). This plan unifies both into a shared library every new Sage site consumes.
-
----
-
-## Sage vs EtchWP
-
-### Sage 10
-
-Sage is an open-source WordPress theme framework by Roots (MIT licensed, 10+ years development, large community). It uses Blade templates, Tailwind CSS, and a modern build pipeline (Bud).
-
-- **Native Tailwind CSS.** No framework lock-in, no proprietary CSS system.
-- **Components are real files** (PHP, Blade, JS). Version controlled, diffable, distributable via Composer packages.
-- **Zero vendor lock-in.** MIT licensed. If Roots disappeared tomorrow, every site keeps working.
-- **Skills transfer** beyond WordPress. Blade and Tailwind are standard web dev skills.
-- **We already have a live Sage build** (accu-shot.com) to extract from.
-
-### EtchWP
-
-Etch (by Digital Gravy) is a visual builder that outputs clean code and syncs to Gutenberg blocks. Genuinely impressive tool, but the wrong fit for us:
-
-- Uses **Automatic.css (ACSS)**, not Tailwind. Different CSS methodology.
-- Components are **JSON blobs in the WordPress database**, not version-controlled files. Cannot wire to Composer.
-- **Proprietary and commercial.** Agency and every client site locked to one vendor's roadmap.
-- **No migration path out.** Components are Etch-specific JSON.
-- Still **v1.5.x** with an explicitly experimental API surface.
-
----
-
 ## The Architecture: Blade + Blocks Blend
 
 Each component is built on a three-layer model.
@@ -144,9 +112,9 @@ Components are **brand-agnostic**. They use semantic Tailwind classes (`bg-prima
 ```
 theme.css (per-site)              @theme mapping              component Blade
 ────────────────────────          ────────────────            ──────────────
---bfa-blue: #00338f       →      --color-primary       →     bg-primary
---bfa-red: #c8102e        →      --color-accent        →     text-accent
---bfa-font-heading: "..."  →     --font-headline       →     font-headline
+--bma-blue: #00338f       →      --color-primary       →     bg-primary
+--bma-red: #c8102e        →      --color-accent        →     text-accent
+--bma-font-heading: "..."  →     --font-headline       →     font-headline
 ```
 
 The 30-second rebrand: change 6 hex values in theme.css, rebuild. Every component across the entire site updates.

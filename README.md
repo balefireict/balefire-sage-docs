@@ -20,7 +20,7 @@ We proved the Composer distribution model on David Tours (17+ component packages
 
 ## Sage vs EtchWP
 
-### Sage 10 — Selected
+### Sage 10
 
 Sage is an open-source WordPress theme framework by Roots (MIT licensed, 10+ years development, large community). It uses Blade templates, Tailwind CSS, and a modern build pipeline (Bud).
 
@@ -30,7 +30,7 @@ Sage is an open-source WordPress theme framework by Roots (MIT licensed, 10+ yea
 - **Skills transfer** beyond WordPress. Blade and Tailwind are standard web dev skills.
 - **We already have a live Sage build** (accu-shot.com) to extract from.
 
-### EtchWP — Not Selected
+### EtchWP
 
 Etch (by Digital Gravy) is a visual builder that outputs clean code and syncs to Gutenberg blocks. Genuinely impressive tool, but the wrong fit for us:
 

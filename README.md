@@ -1,7 +1,5 @@
 # Balefire Sage Component Library — Strategy & Architecture
 
----
-
 ## Executive Summary
 
 Standardize the agency on **Sage 10 + Tailwind CSS** backed by a shared **Gutenberg block + Blade component library** distributed via Composer. Every new client site pulls from the same pool of reusable sections. Build a section once, ship it everywhere. WPBakery sites stay untouched.
@@ -57,11 +55,11 @@ Same Blade view, different entry point. For WPBakery sites during migration.
 
 ### When to use each layer
 
-| Layer | Used for | Who places it |
-|-------|----------|---------------|
-| Blade only | Headers, footers, page layouts | Developer (theme templates) |
-| Blade + Block | CTAs, hero sections, feature grids | Client (Gutenberg editor) |
-| Blade + Shortcode | Backward compat for WPBakery | Legacy content |
+| Layer             | Used for                           | Who places it               |
+| ----------------- | ---------------------------------- | --------------------------- |
+| Blade only        | Headers, footers, page layouts     | Developer (theme templates) |
+| Blade + Block     | CTAs, hero sections, feature grids | Client (Gutenberg editor)   |
+| Blade + Shortcode | Backward compat for WPBakery       | Legacy content              |
 
 **Same Blade file powers all three. Edit once, update everywhere.**
 
@@ -155,22 +153,22 @@ Self-hosted **Forgejo** on existing Hetzner VPS. Public repos at `git.balefireag
 
 ## Timeline
 
-| Phase | Weeks | Deliverable |
-|-------|-------|-------------|
-| Foundation | 1-2 | Forgejo setup, monorepo scaffold, 3-5 components extracted from accu-shot |
-| First Sage Site | 3-5 | Finish accu-shot on Sage + Tailwind, document workflow |
-| Library Expansion | 6-8 | Full component catalog (20+ blocks), team training |
-| Full Adoption | 9+ | All new projects on Sage + Tailwind |
+| Phase             | Weeks | Deliverable                                                               |
+| ----------------- | ----- | ------------------------------------------------------------------------- |
+| Foundation        | 1-2   | Forgejo setup, monorepo scaffold, 3-5 components extracted from accu-shot |
+| First Sage Site   | 3-5   | Finish accu-shot on Sage + Tailwind, document workflow                    |
+| Library Expansion | 6-8   | Full component catalog (20+ blocks), team training                        |
+| Full Adoption     | 9+    | All new projects on Sage + Tailwind                                       |
 
 ---
 
 ## Costs
 
-| Item | Cost |
-|------|------|
-| Forgejo VPS (Hetzner) | $0 (existing server) |
-| Sage / Tailwind | Free (MIT / open source) |
-| Team training | 2-3 weeks per developer |
+| Item                  | Cost                     |
+| --------------------- | ------------------------ |
+| Forgejo VPS (Hetzner) | $0 (existing server)     |
+| Sage / Tailwind       | Free (MIT / open source) |
+| Team training         | 2-3 weeks per developer  |
 
 **Hard cost: $0.** The investment is team time.
 
@@ -178,12 +176,12 @@ Self-hosted **Forgejo** on existing Hetzner VPS. Public repos at `git.balefireag
 
 ## Risks
 
-| Risk | Mitigation |
-|------|------------|
-| Team adoption | Prove on accu-shot first, then roll out with training |
-| Library fragmentation | One maintainer owns the library, PRs from devs |
-| Sage breaking changes | Sage 10 stable, Roots 10yr track record |
-| Forgejo downtime | Commit vendor/ on WPE; VPS uses CI |
+| Risk                  | Mitigation                                            |
+| --------------------- | ----------------------------------------------------- |
+| Team adoption         | Prove on accu-shot first, then roll out with training |
+| Library fragmentation | One maintainer owns the library, PRs from devs        |
+| Sage breaking changes | Sage 10 stable, Roots 10yr track record               |
+| Forgejo downtime      | Commit vendor/ on WPE; VPS uses CI                    |
 
 ---
 
